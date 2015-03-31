@@ -7,7 +7,7 @@ require 'capistrano/deploy'
 # If you are using rvm add these lines:
 require 'capistrano/rvm'
 set :rvm_type, :user
-set :rvm_ruby_version, '2.1.5'
+set :rvm_ruby_version, '2.1.5@urfpicker'
 
 # Includes tasks from other gems included in your Gemfile
 #
