@@ -7,7 +7,7 @@ set :repo_url, 'git@github.com:javier-delgado/URF-picker.git'
 set :deploy_to, '/home/deploy/URF-picker'
 
 set :linked_files, %w{config/database.yml}
-set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
+set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
 
 namespace :deploy do
 
