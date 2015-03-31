@@ -9,9 +9,8 @@ class DataFetcher
 
   def fetch_match_data(match_id)
     request_url = "/api/lol/#{@region.key}/v2.2/match/#{match_id}"
-    puts build_full_url(request_url)
     response = HTTParty.get(build_full_url(request_url))
-    puts response.body
+    return response.body
   end
 
 private 

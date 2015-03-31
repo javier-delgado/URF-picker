@@ -1,9 +1,9 @@
 # == Schema Information
 #
-# Table name: participant_stats
+# Table name: highest_stats
 #
 #  id                                 :integer          not null, primary key
-#  participant_id                     :integer
+#  champion_id                        :integer
 #  assists                            :integer
 #  champ_level                        :integer
 #  deaths                             :integer
@@ -35,11 +35,10 @@
 #  true_damage_dealt_to_champions     :integer
 #  unreal_kills                       :integer
 #  wards_placed                       :integer
-#  winner                             :boolean
-#  created_at                         :datetime         not null
-#  updated_at                         :datetime         not null
+#  wins                               :integer
+#  loses                              :integer
 #
 
-class ParticipantStat < ActiveRecord::Base
-  belongs_to :participant
+class HighestStat < ActiveRecord::Base
+  belongs_to :champion
 end

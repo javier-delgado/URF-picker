@@ -9,12 +9,14 @@
 #  team_key                     :integer
 #  highest_achieved_season_tier :string
 #  participant_key              :integer
-#  spell1ld                     :integer
-#  spell2ld                     :integer
+#  spell1Id                     :integer
+#  spell2Id                     :integer
 #  created_at                   :datetime         not null
 #  updated_at                   :datetime         not null
 #
 
 class Participant < ActiveRecord::Base
-  belongs_to :match_details
+  belongs_to :match_detail
+  belongs_to :team
+  has_one :participant_stat
 end

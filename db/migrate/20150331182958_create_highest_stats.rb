@@ -1,7 +1,7 @@
-class CreateParticipantStats < ActiveRecord::Migration
+class CreateHighestStats < ActiveRecord::Migration
   def change
-    create_table :participant_stats do |t|
-      t.references :participant, index: true
+    create_table :highest_stats do |t|
+      t.references :champion, index: true
       t.integer :assists, limit: 8
       t.integer :champ_level, limit: 8
       t.integer :deaths, limit: 8
@@ -33,10 +33,9 @@ class CreateParticipantStats < ActiveRecord::Migration
       t.integer :true_damage_dealt_to_champions, limit: 8
       t.integer :unreal_kills, limit: 8
       t.integer :wards_placed, limit: 8
-      t.boolean :winner
-
-      t.timestamps null: false
+      t.integer :wins
+      t.integer :loses
     end
-    add_foreign_key :participant_stats, :participants
+    add_foreign_key :highest_stats, :champions
   end
 end

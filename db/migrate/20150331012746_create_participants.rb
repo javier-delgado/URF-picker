@@ -7,8 +7,8 @@ class CreateParticipants < ActiveRecord::Migration
       t.integer :team_key
       t.string  :highest_achieved_season_tier
       t.integer :participant_key
-      t.integer :spell1ld
-      t.integer :spell2ld
+      t.integer :spell1Id
+      t.integer :spell2Id
 
       t.timestamps null: false
     end

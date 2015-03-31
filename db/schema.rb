@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150331171403) do
+ActiveRecord::Schema.define(version: 20150331182958) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,18 +45,57 @@ ActiveRecord::Schema.define(version: 20150331171403) do
   add_index "champions_participants", ["champion_id", "participant_id"], name: "index_champions_participants_on_champion_id_and_participant_id", using: :btree
   add_index "champions_participants", ["participant_id"], name: "index_champions_participants_on_participant_id", using: :btree
 
+  create_table "highest_stats", force: :cascade do |t|
+    t.integer "champion_id"
+    t.integer "assists",                            limit: 8
+    t.integer "champ_level",                        limit: 8
+    t.integer "deaths",                             limit: 8
+    t.integer "double_kills",                       limit: 8
+    t.integer "gold_earned",                        limit: 8
+    t.integer "item0",                              limit: 8
+    t.integer "item1",                              limit: 8
+    t.integer "item2",                              limit: 8
+    t.integer "item3",                              limit: 8
+    t.integer "item4",                              limit: 8
+    t.integer "item5",                              limit: 8
+    t.integer "item6",                              limit: 8
+    t.integer "item7",                              limit: 8
+    t.integer "kills",                              limit: 8
+    t.integer "magic_damage_dealt_to_champions",    limit: 8
+    t.integer "magic_damage_taken",                 limit: 8
+    t.integer "minions_killed",                     limit: 8
+    t.integer "neutral_minions_killed",             limit: 8
+    t.integer "penta_kills",                        limit: 8
+    t.integer "physical_damage_dealt_to_champions", limit: 8
+    t.integer "physical_damage_taken",              limit: 8
+    t.integer "quadra_kills",                       limit: 8
+    t.integer "total_damage_dealt_to_champions",    limit: 8
+    t.integer "total_damage_taken",                 limit: 8
+    t.integer "total_heal",                         limit: 8
+    t.integer "total_time_crowd_control_dealt",     limit: 8
+    t.integer "tower_kills",                        limit: 8
+    t.integer "triple_kills",                       limit: 8
+    t.integer "true_damage_dealt_to_champions",     limit: 8
+    t.integer "unreal_kills",                       limit: 8
+    t.integer "wards_placed",                       limit: 8
+    t.integer "wins"
+    t.integer "loses"
+  end
+
+  add_index "highest_stats", ["champion_id"], name: "index_highest_stats_on_champion_id", using: :btree
+
   create_table "match_details", force: :cascade do |t|
-    t.datetime "matchCreation"
-    t.integer  "matchDuration", limit: 8
+    t.datetime "match_creation"
+    t.integer  "match_duration", limit: 8
     t.string   "region"
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
   create_table "participant_stats", force: :cascade do |t|
     t.integer  "participant_id"
     t.integer  "assists",                            limit: 8
-    t.integer  "champLevel",                         limit: 8
+    t.integer  "champ_level",                        limit: 8
     t.integer  "deaths",                             limit: 8
     t.integer  "double_kills",                       limit: 8
     t.integer  "gold_earned",                        limit: 8
@@ -100,8 +139,8 @@ ActiveRecord::Schema.define(version: 20150331171403) do
     t.integer  "team_key"
     t.string   "highest_achieved_season_tier"
     t.integer  "participant_key"
-    t.integer  "spell1ld"
-    t.integer  "spell2ld"
+    t.integer  "spell1Id"
+    t.integer  "spell2Id"
     t.datetime "created_at",                   null: false
     t.datetime "updated_at",                   null: false
   end
@@ -136,6 +175,7 @@ ActiveRecord::Schema.define(version: 20150331171403) do
 
   add_foreign_key "banned_champions", "champions"
   add_foreign_key "banned_champions", "teams"
+  add_foreign_key "highest_stats", "champions"
   add_foreign_key "participant_stats", "participants"
   add_foreign_key "participants", "match_details"
   add_foreign_key "participants", "teams"

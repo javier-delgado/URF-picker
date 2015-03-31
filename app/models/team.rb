@@ -19,4 +19,7 @@
 #
 
 class Team < ActiveRecord::Base
+  belongs_to :match_detail
+
+  scope :by_key, ->(key) { where(team_key: key).first }
 end

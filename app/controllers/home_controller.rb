@@ -4,7 +4,10 @@ class HomeController < ApplicationController
 
   def fetch_data
     fetcher = DataFetcher.new(Region.by_key("las"))
-    fetcher.fetch_match_data(150960304)
+    json_string = fetcher.fetch_match_data(150960304)
+
+    parser = DataParser.new(json_string)
+    parser.parse!
     redirect_to root_path
   end
   

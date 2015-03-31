@@ -13,4 +13,5 @@
 #
 
 class Champion < ActiveRecord::Base
+  has_one :highest_stat
 end
