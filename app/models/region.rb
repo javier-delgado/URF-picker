@@ -10,6 +10,7 @@
 #
 
 class Region < ActiveRecord::Base
+  validates_uniqueness_of :key
 
   scope :by_key, ->(key) { where(key: key).first }
 end

@@ -13,5 +13,7 @@
 #
 
 class Champion < ActiveRecord::Base
+  validates_uniqueness_of :champion_key
+
   has_one :highest_stat
 end
