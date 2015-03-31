@@ -8,3 +8,9 @@ development:
   database: db_urfpicker
   username: {username}
   password: {password}
+
+production:
+  <<: *default
+  database: db_urfpicker_prod
+  username: {username}
+  password: {password}
