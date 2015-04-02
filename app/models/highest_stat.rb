@@ -37,8 +37,10 @@
 #  wards_placed                       :integer
 #  wins                               :integer
 #  loses                              :integer
+#  region_id                          :integer
 #
 
 class HighestStat < ActiveRecord::Base
   belongs_to :champion
+  belongs_to :region
 end

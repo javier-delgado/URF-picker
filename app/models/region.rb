@@ -12,5 +12,7 @@
 class Region < ActiveRecord::Base
   validates_uniqueness_of :key
 
+  has_many :highest_stats  
+
   scope :by_key, ->(key) { where(key: key).first }
 end

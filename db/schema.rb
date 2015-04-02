@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150331182958) do
+ActiveRecord::Schema.define(version: 20150402214123) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -80,6 +80,7 @@ ActiveRecord::Schema.define(version: 20150331182958) do
     t.integer "wards_placed",                       limit: 8
     t.integer "wins"
     t.integer "loses"
+    t.integer "region_id"
   end
 
   add_index "highest_stats", ["champion_id"], name: "index_highest_stats_on_champion_id", using: :btree
@@ -87,7 +88,7 @@ ActiveRecord::Schema.define(version: 20150331182958) do
   create_table "match_details", force: :cascade do |t|
     t.datetime "match_creation"
     t.integer  "match_duration", limit: 8
-    t.string   "region"
+    t.string   "region_key"
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
   end

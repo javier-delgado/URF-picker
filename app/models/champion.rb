@@ -15,6 +15,10 @@
 class Champion < ActiveRecord::Base
   validates_uniqueness_of :champion_key
 
-  has_one :highest_stat
+  has_many :highest_stats
   has_many :participants, foreign_key: :champion_key, primary_key: :champion_key
+
+  def highest_stat_by_region(region)
+    highest_stats.where(region: region)
+  end
 end
