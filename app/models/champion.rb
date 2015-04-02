@@ -16,4 +16,5 @@ class Champion < ActiveRecord::Base
   validates_uniqueness_of :champion_key
 
   has_one :highest_stat
+  has_many :participants, foreign_key: :champion_key, primary_key: :champion_key
 end

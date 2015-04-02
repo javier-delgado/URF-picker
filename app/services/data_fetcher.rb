@@ -8,9 +8,19 @@ class DataFetcher
   end
 
   def fetch_match_data(match_id)
-    request_url = "/api/lol/#{@region.key}/v2.2/match/#{match_id}"
-    response = HTTParty.get(build_full_url(request_url))
-    return response.body
+    full_url = build_full_url("/api/lol/#{@region.key}/v2.2/match/#{match_id}")
+    p full_url
+    response = HTTParty.get(full_url)
+    p response.code
+    return response
+  end
+
+  def fetch_urf_matches(begin_date)
+    full_url = build_full_url("/api/lol/#{@region.key}/v4.1/game/ids") + "&beginDate=#{begin_date}"
+    p full_url
+    response = HTTParty.get(full_url)
+    p response.code
+    return response
   end
 
 private 

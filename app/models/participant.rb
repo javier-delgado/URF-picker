@@ -18,5 +18,6 @@
 class Participant < ActiveRecord::Base
   belongs_to :match_detail
   belongs_to :team
-  has_one :participant_stat
+  has_one :stats, class_name: "ParticipantStat"
+  belongs_to :champion, foreign_key: :champion_key, primary_key: :champion_key
 end

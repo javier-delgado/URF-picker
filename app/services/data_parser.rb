@@ -48,10 +48,10 @@ private
         team_key: participant['teamId'],
         champion_key: participant['championId'],
         highest_achieved_season_tier: participant['highestAchievedSeasonTier'],
-        participant_key: participant['participant_id'],
+        participant_key: participant['participantId'],
         spell1Id: participant['spell1Id'],
         spell2Id: participant['spell2Id'],
-        participant_stat: parse_participant_stats(participant['stats'])
+        stats: parse_participant_stats(participant['stats'])
       )
     end
   end
