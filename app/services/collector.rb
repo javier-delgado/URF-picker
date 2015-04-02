@@ -1,6 +1,7 @@
 class Collector
   def collect!
     @start_time = Time.now
+    @errors = 0  
     p "Collector invoked"
     Region.all.each do |region|
       fetcher = DataFetcher.new(region)
@@ -9,6 +10,8 @@ class Collector
       response = fetcher.fetch_urf_matches(round_time(2.hours.ago, 5).to_i)
       if response.code == 200
         match_ids = JSON.parse(response.body)
+      else
+        @errors += 1
       end
 
       match_ids.each do |match_id|
@@ -18,11 +21,13 @@ class Collector
 
           parser = DataParser.new(json_string)
           parser.parse!
+        else
+          @errors += 1
         end
       end
     end
-    p "Collector finished:"
-    p (Time.now - @start_time) + "seconds"
+    p "Collector finished: " + (Time.now - @start_time).to_s + " seconds"
+    p "Errors: " + @errors.to_s
   end
 
   def round_time(time, minutes)

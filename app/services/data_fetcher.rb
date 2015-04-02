@@ -1,7 +1,5 @@
 class DataFetcher 
   attr_writer :region
-  #80657
-  #150960304
 
   def initialize(region)
     @region = region
@@ -9,17 +7,13 @@ class DataFetcher
 
   def fetch_match_data(match_id)
     full_url = build_full_url("/api/lol/#{@region.key}/v2.2/match/#{match_id}")
-    p full_url
     response = HTTParty.get(full_url)
-    p response.code
     return response
   end
 
   def fetch_urf_matches(begin_date)
     full_url = build_full_url("/api/lol/#{@region.key}/v4.1/game/ids") + "&beginDate=#{begin_date}"
-    p full_url
     response = HTTParty.get(full_url)
-    p response.code
     return response
   end
 

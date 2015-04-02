@@ -15,6 +15,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'annotate', '~> 2.6.6'
 gem 'slim-rails'
 gem 'httparty'
+gem 'whenever'
 
 gem 'capistrano', '~> 3.1.0'
 gem 'capistrano-bundler', '~> 1.1.2'
