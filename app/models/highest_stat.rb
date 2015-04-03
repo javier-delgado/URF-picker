@@ -38,6 +38,7 @@
 #  wins                               :integer
 #  loses                              :integer
 #  region_id                          :integer
+#  count                              :integer
 #
 
 class HighestStat < ActiveRecord::Base

@@ -83,6 +83,7 @@ class HighestStatSummatory
     HighestStat.create(
       champion: @champion,
       region: @region == "global" ? nil : @region,
+      count: @count,
       assists: (@assists / @count),
       champ_level: (@champ_level / @count),
       deaths: (@deaths / @count),
