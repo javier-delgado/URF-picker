@@ -1,4 +1,24 @@
 .links-container
-    = link_to "What is this?", "#"
-    = link_to "About", "#"
-    
+    = link_to "What is this?", "#", data: { toggle: "modal", target: "#what-is-modal" }
+    = link_to "About", "#", data: { toggle: "modal", target: "#about-modal" }
+
+.modal.fade#what-is-modal tabindex="-1" role="dialog" aria-labelledby="what-is-modal" aria-hidden="true"
+  .modal-dialog
+    .modal-content
+      .modal-header
+        button.close type="button" data-dismiss="modal" aria-hidden="true" X
+        h4.modal-title#myModalLabel Modal title
+
+      .modal-body
+        h3 Modal Body
+
+.modal.fade#about-modal tabindex="-1" role="dialog" aria-labelledby="about-modal" aria-hidden="true"
+  .modal-dialog
+    .modal-content
+      .modal-header
+        button.close type="button" data-dismiss="modal" aria-hidden="true" X
+        h4.modal-title#myModalLabel Modal title
+
+      .modal-body
+        h3 Modal Body
+      
