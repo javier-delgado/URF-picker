@@ -6,13 +6,13 @@ class DataFetcher
   end
 
   def fetch_match_data(match_id)
-    full_url = build_full_url("/api/lol/#{@region.key}/v2.2/match/#{match_id}")
+    full_url = build_full_url("/api/lol/#{@region.url_key}/v2.2/match/#{match_id}")
     response = HTTParty.get(full_url)
     return response
   end
 
   def fetch_urf_matches(begin_date)
-    full_url = build_full_url("/api/lol/#{@region.key}/v4.1/game/ids") + "&beginDate=#{begin_date}"
+    full_url = build_full_url("/api/lol/#{@region.url_key}/v4.1/game/ids") + "&beginDate=#{begin_date}"
     response = HTTParty.get(full_url)
     return response
   end
@@ -23,6 +23,6 @@ private
   end
 
   def get_regional_api
-    return "https://#{@region.key}.api.pvp.net"
+    return "https://#{@region.url_key}.api.pvp.net"
   end
 end

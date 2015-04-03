@@ -18,7 +18,7 @@ private
     MatchDetail.create(
       match_creation: @data['matchCreation'],
       match_duration: @data['matchDuration'],
-      region: @data['region']
+      region_key: @data['region']
     )
   end
 

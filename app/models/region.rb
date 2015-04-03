@@ -15,4 +15,8 @@ class Region < ActiveRecord::Base
   has_many :highest_stats  
 
   scope :by_key, ->(key) { where(key: key).first }
+
+  def url_key
+    key.downcase
+  end
 end
