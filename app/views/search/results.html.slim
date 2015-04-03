@@ -1,0 +1,30 @@
+= render 'navbar'
+
+.container-fluid.no-margin
+  img.splash src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Garen_0.jpg"
+
+  .content.shadow-rectangle
+    h2 Your best pick is
+    .champ-info
+      .row
+        .col-sm-2
+          img.sprite src="http://ddragon.leagueoflegends.com/cdn/5.6.1/img/champion/Garen.png"
+        .col-sm-10
+          h1.champ-name Garen
+          p The might of demacia
+
+      .row
+        p.explanation Garen has the highest winrate of all the champions. Pick him in yout next game to increase your chances of winning!
+
+    .title
+      h2.left Stats
+      a.icon.inverse href="#" data-toggle="tooltip" data-placement="top" data-original-title="This data represent the average stats for this champion. It was collected from 32423 random URF matches."
+        i.glyphicon.glyphicon-question-sign
+
+    table.table
+      tr
+        td Kills
+        td 10.5
+      tr
+        td Deaths
+        td 11

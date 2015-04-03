@@ -16,3 +16,13 @@ input.hidden {
   width: 1px; 
   height: 1px;
 }
+
+a.icon {
+  text-decoration : none;
+  color : #000; 
+}
+
+a.icon.inverse {
+  text-decoration : none;
+  color : #FFF;  
+}

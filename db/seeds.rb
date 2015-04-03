@@ -19,7 +19,7 @@ champions['data'].each do |champ|
     champion_key: champion['key'].to_i,
     name: champion['name'],
     title: champion['title'],
-    image: "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/#{champion['key']}_0.jpg",
+    image: "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/#{champion['name']}_0.jpg",
     sprite: "http://ddragon.leagueoflegends.com/cdn/5.6.1/img/champion/#{champion['image']['full']}"
   )
 end

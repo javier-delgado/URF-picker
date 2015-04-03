@@ -1,0 +1,15 @@
+nav.navbar.navbar-default.navbar-results role="navigation"
+  .container-fluid
+    .navbar-header
+      label URF Champion Picker
+
+    .collapse.navbar-collapse
+      .col-sm-5.col-md-5
+        = form_tag search_champion_path, id: 'search-form', class: 'form-inline search-form-navbar', onkeypress: 'return event.keyCode != 13;'
+          .form-group
+            = autocomplete_field_tag :search_option_name, '', autocomplete_search_option_name_path, class: 'form-control', placeholder: 'I want to...'
+
+          = select_tag 'region'
+
+      = render 'partial/links'
+      

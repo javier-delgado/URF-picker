@@ -1,0 +1,72 @@
+.search-form-navbar {
+  padding-top: 16px;
+  .form-group {
+    width: 80%;
+    input {
+      width: 100%;
+      height: 35px;
+      font-size: 20px;
+    }
+  }
+}
+
+img.splash {
+  position: absolute;
+  display: block;
+  width: 100% !important;
+  height: auto !important;
+  z-index: -99999;
+}
+
+nav.navbar {
+  height: 75px;
+  margin-bottom: 0px;
+}
+
+.no-margin {
+  padding: 0 !important;
+}
+
+.shadow-rectangle {
+  margin: 15px;
+  padding-right: 15px;
+  padding-left: 15px;
+  width: 500px;
+  min-height: 600px;
+  background-color: rgba(0, 0, 0, .5);
+  border: 2px solid #FFFFFF;  
+}
+
+.content {
+  img.sprite {
+    height: 70px;
+    align-content: center;
+  }
+
+  h1, h2, p, table tr td {
+    color: white;
+  }
+
+  h1.champ-name {
+    margin-top: 0 ;
+  }
+
+  h2.left {
+    float: left;
+  }
+
+  a.icon {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+  }
+
+  p.explanation {
+    margin: 15px;
+  }
+
+  .title {
+    height: 50px;
+    line-height: 80px;
+  }
+}

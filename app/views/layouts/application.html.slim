@@ -11,8 +11,7 @@ html
     <link rel="shortcut icon" href="#{ asset_url('favicon.png')}" type="image/png" />
 
   body
-    .container
-      = yield
+    = yield
     /= render 'layouts/partials/footer'
 
     = javascript_include_tag "application.js"
