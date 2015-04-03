@@ -7,6 +7,9 @@
 
   p.search-explain Whether you'd like to win every game, get lots of kills or feed the entire game, we'll pick the perfect champion for you
 
-  form.form-inline.search-form role="form"
+  = form_tag search_champion_path, id: 'search-form', class: 'form-inline search-form', onkeypress: 'return event.keyCode != 13;'
     .form-group
-      input.form_control type="text" name="query" placeholder="I want to..."
+      = autocomplete_field_tag :search_option_name, '', autocomplete_search_option_name_path, class: 'form-control', placeholder: 'I want to...'
+    a href="#" data-toggle="tooltip" data-placement="top" data-original-title="Just type what you want to do in the game. Try 'Win every game' or 'Get tons of kills'. "
+      i.glyphicon.glyphicon-question-sign
+

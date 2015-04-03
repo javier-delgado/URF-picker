@@ -18,6 +18,8 @@ gem 'httparty'
 gem 'whenever'
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
+gem 'jquery-ui-rails'
+gem 'rails-jquery-autocomplete'
 
 gem 'capistrano', '~> 3.1.0'
 gem 'capistrano-bundler', '~> 1.1.2'

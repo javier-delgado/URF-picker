@@ -23,3 +23,7 @@ champions['data'].each do |champ|
     sprite: "http://ddragon.leagueoflegends.com/cdn/5.6.1/img/champion/#{champion['image']['full']}"
   )
 end
+
+SearchOption.create(name: 'Win every game!', associated_stat: '')
+SearchOption.create(name: 'Make tons of damage!', associated_stat: '')
+SearchOption.create(name: 'Kill all the enemies!', associated_stat: '')
