@@ -16,6 +16,8 @@ gem 'annotate', '~> 2.6.6'
 gem 'slim-rails'
 gem 'httparty'
 gem 'whenever'
+gem 'bootstrap-sass', '~> 3.2.0'
+gem 'autoprefixer-rails'
 
 gem 'capistrano', '~> 3.1.0'
 gem 'capistrano-bundler', '~> 1.1.2'
@@ -24,10 +26,9 @@ gem 'capistrano-rvm', github: "capistrano/rvm"
 
 group :development, :test do
   gem 'byebug'
-
   gem 'web-console', '~> 2.0'
-
   gem 'spring'
+  gem 'quiet_assets'
 end
 
 group :production do
