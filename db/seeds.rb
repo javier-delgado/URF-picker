@@ -24,6 +24,17 @@ champions['data'].each do |champ|
   )
 end
 
-SearchOption.create(name: 'Win every game!', associated_stat: '')
-SearchOption.create(name: 'Make tons of damage!', associated_stat: '')
-SearchOption.create(name: 'Kill all the enemies!', associated_stat: '')
+SearchOption.create(name: 'Win every game!', 
+  associated_stat: 'wins',
+  ordering: 'DESC',
+  explanation: "{champ_name} has the highest winrate of all the champions. Pick this champion in yout next game to increase your chances of winning!")
+
+SearchOption.create(name: 'Make tons of damage!',
+  associated_stat: 'total_damage_dealt_to_champions',
+  ordering: 'DESC',
+  explanation: "{champ_name} has the highest damage rate in the entire URF kingdom. Choose this champion to make your enemies cry for mercy!")
+
+SearchOption.create(name: 'Kill all the enemies!', 
+  associated_stat: 'kills', 
+  ordering: 'DESC',
+  explanation: "So you want to get very VERY fed? {champ_name} has the highest kill rate; pick this champion and kill 'em all!")

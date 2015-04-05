@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150403185719) do
+ActiveRecord::Schema.define(version: 20150405225800) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -52,14 +52,6 @@ ActiveRecord::Schema.define(version: 20150403185719) do
     t.integer "deaths",                             limit: 8
     t.integer "double_kills",                       limit: 8
     t.integer "gold_earned",                        limit: 8
-    t.integer "item0",                              limit: 8
-    t.integer "item1",                              limit: 8
-    t.integer "item2",                              limit: 8
-    t.integer "item3",                              limit: 8
-    t.integer "item4",                              limit: 8
-    t.integer "item5",                              limit: 8
-    t.integer "item6",                              limit: 8
-    t.integer "item7",                              limit: 8
     t.integer "kills",                              limit: 8
     t.integer "magic_damage_dealt_to_champions",    limit: 8
     t.integer "magic_damage_taken",                 limit: 8
@@ -162,6 +154,8 @@ ActiveRecord::Schema.define(version: 20150403185719) do
     t.string   "associated_stat"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.string   "ordering"
+    t.text     "explanation"
   end
 
   create_table "teams", force: :cascade do |t|

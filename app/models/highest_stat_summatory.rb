@@ -108,8 +108,8 @@ class HighestStatSummatory
       true_damage_dealt_to_champions: (@true_damage_dealt_to_champions / @count),
       unreal_kills: (@unreal_kills / @count),
       wards_placed: (@wards_placed / @count),
-      wins: @wins,
-      loses: @loses
+      wins: (@wins / @count),
+      loses: (@loses / @count)
    )
   end
 

@@ -43,7 +43,7 @@ nav.navbar {
     align-content: center;
   }
 
-  h1, h2, p, table tr td {
+  h1, h2, h3, h4, p, table tr td {
     color: white;
   }
 
@@ -61,7 +61,7 @@ nav.navbar {
     margin-left: 10px;
   }
 
-  p.explanation {
+  .explanation {
     margin: 15px;
   }
 

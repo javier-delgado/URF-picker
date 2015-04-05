@@ -9,14 +9,6 @@
 #  deaths                             :integer
 #  double_kills                       :integer
 #  gold_earned                        :integer
-#  item0                              :integer
-#  item1                              :integer
-#  item2                              :integer
-#  item3                              :integer
-#  item4                              :integer
-#  item5                              :integer
-#  item6                              :integer
-#  item7                              :integer
 #  kills                              :integer
 #  magic_damage_dealt_to_champions    :integer
 #  magic_damage_taken                 :integer
@@ -44,4 +36,11 @@
 class HighestStat < ActiveRecord::Base
   belongs_to :champion
   belongs_to :region
+
+  scope :by_region, ->(region) { where(region: region)}
+
+  def stats_names
+    names = attribute_names - ['id', 'champion_id', 'region_id', 'count']
+    names.sort_by { |n| n.downcase }
+  end
 end
