@@ -14,15 +14,16 @@
           p = @result.champion.title
 
       .row
-        h4.explanation = @option.explanation_for(@result.champion.name)
+        h3.explanation = @option.explanation_for(@result.champion.name)
 
     .title
       h2.left Stats
       a.icon.inverse href="#" data-toggle="tooltip" data-placement="top" data-original-title="This data represent the average stats for this champion. It was collected from #{MatchDetail.count} random URF matches."
         i.glyphicon.glyphicon-question-sign
 
-    table.table
-      - @result.stats_names.each do |stat_name|
-        tr
-          td = stat_name.humanize
-          td = @result[stat_name]
+    .scrollable
+      table.table
+        - @result.stats_names.each do |stat_name|
+          tr
+            td = stat_name.humanize
+            td = "%.10g" % ("%.1f" % @result[stat_name])

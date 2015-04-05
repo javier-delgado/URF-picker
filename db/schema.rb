@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150405225800) do
+ActiveRecord::Schema.define(version: 20150405231715) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,31 +47,31 @@ ActiveRecord::Schema.define(version: 20150405225800) do
 
   create_table "highest_stats", force: :cascade do |t|
     t.integer "champion_id"
-    t.integer "assists",                            limit: 8
-    t.integer "champ_level",                        limit: 8
-    t.integer "deaths",                             limit: 8
-    t.integer "double_kills",                       limit: 8
+    t.float   "assists"
+    t.float   "champ_level"
+    t.float   "deaths"
+    t.float   "double_kills"
     t.integer "gold_earned",                        limit: 8
-    t.integer "kills",                              limit: 8
+    t.float   "kills"
     t.integer "magic_damage_dealt_to_champions",    limit: 8
     t.integer "magic_damage_taken",                 limit: 8
-    t.integer "minions_killed",                     limit: 8
-    t.integer "neutral_minions_killed",             limit: 8
-    t.integer "penta_kills",                        limit: 8
+    t.float   "minions_killed"
+    t.float   "neutral_minions_killed"
+    t.float   "penta_kills"
     t.integer "physical_damage_dealt_to_champions", limit: 8
     t.integer "physical_damage_taken",              limit: 8
-    t.integer "quadra_kills",                       limit: 8
+    t.float   "quadra_kills"
     t.integer "total_damage_dealt_to_champions",    limit: 8
     t.integer "total_damage_taken",                 limit: 8
     t.integer "total_heal",                         limit: 8
     t.integer "total_time_crowd_control_dealt",     limit: 8
-    t.integer "tower_kills",                        limit: 8
-    t.integer "triple_kills",                       limit: 8
+    t.float   "tower_kills"
+    t.float   "triple_kills"
     t.integer "true_damage_dealt_to_champions",     limit: 8
-    t.integer "unreal_kills",                       limit: 8
-    t.integer "wards_placed",                       limit: 8
-    t.integer "wins"
-    t.integer "loses"
+    t.float   "unreal_kills"
+    t.float   "wards_placed"
+    t.float   "wins"
+    t.float   "loses"
     t.integer "region_id"
     t.integer "count"
   end

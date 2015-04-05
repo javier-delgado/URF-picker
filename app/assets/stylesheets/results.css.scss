@@ -69,4 +69,12 @@ nav.navbar {
     height: 50px;
     line-height: 80px;
   }
+
+  .scrollable {
+    height: 500px;
+    width: 100%;
+    margin-bottom: 15px;
+    overflow: auto;
+    border: 1px solid #AAA;
+  }
 }

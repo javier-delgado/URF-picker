@@ -8,6 +8,7 @@
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
 #  ordering        :string
+#  explanation     :text
 #
 
 class SearchOption < ActiveRecord::Base
