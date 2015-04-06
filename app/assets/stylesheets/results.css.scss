@@ -8,11 +8,17 @@
       font-size: 20px;
     }
   }
+
+  .select-region {
+    margin-left: 5px;
+  }
 }
 
 img.splash {
   position: absolute;
   display: block;
+  top: 0;
+  left: 0;
   width: 100% !important;
   height: auto !important;
   z-index: -99999;
@@ -21,7 +27,16 @@ img.splash {
 nav.navbar {
   height: 75px;
   margin-bottom: 0px;
+  border: 0;
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); /* Standard syntax */
 }
+
+.navbar-header {
+  color: white;
+} 
 
 .no-margin {
   padding: 0 !important;
@@ -29,6 +44,7 @@ nav.navbar {
 
 .shadow-rectangle {
   margin: 15px;
+  margin-top: 25px;
   padding-right: 15px;
   padding-left: 15px;
   width: 500px;

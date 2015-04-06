@@ -5,7 +5,9 @@ class SearchController < ApplicationController
     @option = SearchOption.find_by(name: params[:search_option_name])
     redirect_to root_path if @option.nil?
 
-    @result = HighestStat.by_region(params[:region])
+    region = Region.find_by(id: params[:region])
+
+    @result = HighestStat.by_region(region)
       .order(@option.order_query).first
 
     render :results

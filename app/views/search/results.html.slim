@@ -26,4 +26,7 @@
         - @result.stats_names.each do |stat_name|
           tr
             td = stat_name.humanize
-            td = "%.10g" % ("%.1f" % @result[stat_name])
+            - if(stat_name == "wins" or stat_name == "loses")
+              td = number_to_percentage("%.1f" % (@result[stat_name] * 100), precision: 0)
+            - else
+              td = "%.10g" % ("%.1f" % @result[stat_name])
