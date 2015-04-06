@@ -1,8 +1,6 @@
 = render 'navbar'
 
 .container-fluid.no-margin
-  img.splash src="#{@result.champion.image}"
-
   .content.shadow-rectangle
     h2 Your best pick is
     .champ-info
@@ -30,3 +28,5 @@
               td = number_to_percentage("%.1f" % (@result[stat_name] * 100), precision: 0)
             - else
               td = "%.10g" % ("%.1f" % @result[stat_name])
+
+= put_background_image(@result.champion.image)

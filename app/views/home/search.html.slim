@@ -1,3 +1,4 @@
+/img.splash src="#{asset_path('urf.jpg')}"
 .container
   = render 'partial/links'  
 
@@ -11,3 +12,5 @@
 
       a.icon href="#" data-toggle="tooltip" data-placement="top" data-original-title="Just type what you want to do in the game. Try 'Win every game' or 'Get tons of kills'. "
         i.glyphicon.glyphicon-question-sign
+
+= put_background_image(asset_path('urf.jpg'))
