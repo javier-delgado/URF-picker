@@ -1,10 +1,6 @@
-.main-title {
-  margin: 150px auto 0px auto;
-}
-
 .search-explain {
   margin: 20px auto 0px auto;
-  width: 50%;
+  width: 70%;
 }
 
 form.search-form {
@@ -17,4 +13,13 @@ form.search-form {
       font-size: 24px;
     }
   }
+}
+
+.title {
+  margin: 140px auto 0px auto;
+  background-color: rgba(0, 0, 0, .4);
+  border-radius: 25px;
+  padding: 20px;
+  width: 40%;
+  color: wheat;
 }
