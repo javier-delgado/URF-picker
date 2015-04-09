@@ -1,5 +1,12 @@
 $(document).ready(function () {
-  $('#search_option_name').bind('railsAutocomplete.select', function(event, data){
+ 
+  $(".js-champ-options").select2({
+    placeholder: "I want to...",
+    allowClear: true
+  });    
+
+  $('.js-champ-options').on("select2-selected", function(e) { 
     $("#search-form").submit();
   });
+  
 });

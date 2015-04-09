@@ -1,2 +1,2 @@
 .form-group
-  = autocomplete_field_tag :search_option_name, '', autocomplete_search_option_name_path, class: 'form-control', placeholder: 'I want to...'
+  = select_tag "search_option", options_from_collection_for_select(search_options, "id", "name"), include_blank: true, class: "form-control js-champ-options"

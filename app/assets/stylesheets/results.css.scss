@@ -2,14 +2,17 @@
   padding-top: 16px;
   .form-group {
     width: 80%;
-    input {
+    .select2-container {
       width: 100%;
+      font-size: 18px;
+    }
+    .select2-choice {
       height: 35px;
-      font-size: 20px;
     }
   }
 
   .select-region {
+    height: 35px;
     margin-left: 5px;
   }
 }
@@ -33,14 +36,20 @@ nav.navbar {
 }
 
 .shadow-rectangle {
+  display: flex;
+  flex-direction: column;
   margin: 15px;
   margin-top: 25px;
   padding-right: 15px;
   padding-left: 15px;
   width: 500px;
-  min-height: 600px;
+  height: 82vh;
   background-color: rgba(0, 0, 0, .5);
-  border: 2px solid #FFFFFF;  
+  border: 2px solid #FFFFFF; 
+}
+
+.champ-info {
+  min-height: 280px;
 }
 
 .content {
@@ -72,12 +81,17 @@ nav.navbar {
   }
 
   .title {
-    height: 50px;
+    max-height: 80px;
+    height: 270px;
     line-height: 80px;
+    h2 {
+      position: relative;
+      bottom: 0;
+    }
   }
 
+
   .scrollable {
-    height: 500px;
     width: 100%;
     margin-bottom: 15px;
     overflow: auto;
