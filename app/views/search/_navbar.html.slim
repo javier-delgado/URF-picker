@@ -8,7 +8,7 @@ nav.navbar.navbar-default.navbar-results role="navigation"
         = form_tag search_champion_path, id: 'search-form', class: 'form-inline search-form-navbar', onkeypress: 'return event.keyCode != 13;'
           = render 'partial/search_bar'
 
-          = select_tag 'region', options_from_collection_for_select(Region.all, 'id', 'key'), include_blank: 'Global', class: 'form-control select-region'
+          = select_tag 'region', options_for_select(Region.for_select, @region.nil? ? nil : @region.key), include_blank: 'Global', class: 'form-control select-region'
 
       = render 'partial/links'
       

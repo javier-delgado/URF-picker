@@ -19,4 +19,8 @@ class Region < ActiveRecord::Base
   def url_key
     key.downcase
   end
+
+  def self.for_select
+    all.map { |x| x.key }
+  end
 end

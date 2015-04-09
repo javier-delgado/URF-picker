@@ -1,2 +1,2 @@
 .form-group
-  = select_tag "search_option", options_from_collection_for_select(search_options, "id", "name"), include_blank: true, class: "form-control js-champ-options"
+  = select_tag "search_option", options_for_select(SearchOption.for_select, @option.nil? ? nil : @option.name), include_blank: true, class: "form-control js-champ-options"

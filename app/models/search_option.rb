@@ -21,4 +21,8 @@ class SearchOption < ActiveRecord::Base
   def explanation_for(champ_name)
     explanation.sub("{champ_name}", champ_name)
   end
+
+  def self.for_select
+    all.map { |x| x.name }
+  end
 end
