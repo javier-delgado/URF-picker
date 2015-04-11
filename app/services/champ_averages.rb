@@ -22,9 +22,13 @@ private
 
   def perform_summatory
     total = MatchDetail.count
-    match_details = MatchDetail.all.eager_load(:participants => :champion).eager_load(:participants => :stats).eager_load(:region)
-    match_details.each_with_index do |match, idx|
+    idx = 1
+    MatchDetail.includes(:participants => :champion).joins(:participants => :champion)
+      .includes(:participants => :stats).joins(:participants => :stats)
+      .includes(:region).joins(:region).find_each(batch_size: 1000) do |match|
+
       print "\r#{idx}/#{total} complete"
+      idx += 1
       match.participants.each do |participant|
         #regional
         hss = find_highest_stat_summatory(participant.champion, match.region)
