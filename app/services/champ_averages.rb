@@ -22,7 +22,8 @@ private
 
   def perform_summatory
     total = MatchDetail.count
-    MatchDetail.all.each_with_index do |match, idx|
+    match_details = MatchDetail.all.eager_load(:participants => :champion).eager_load(:participants => :stats).eager_load(:region)
+    match_details.each_with_index do |match, idx|
       print "\r#{idx}/#{total} complete"
       match.participants.each do |participant|
         #regional
