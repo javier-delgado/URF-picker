@@ -3,7 +3,7 @@
 .container-fluid.no-margin
   .content.shadow-rectangle
     .champ-info
-      h2 Your best pick is
+      h4 Your best pick is
       .row
         .col-sm-2
           img.sprite src="#{@result.champion.sprite}"
@@ -23,10 +23,10 @@
       table.table
         - @result.stats_names.each do |stat_name|
           tr
-            td = stat_name.humanize
+            td.yellow = stat_name.humanize
             - if(stat_name == "wins" or stat_name == "loses")
               td = number_to_percentage("%.1f" % (@result[stat_name] * 100), precision: 0)
             - else
               td = "%.10g" % ("%.1f" % @result[stat_name])
 
-= put_background_image(@result.champion.image)
+= put_background_image(@result.champion.image, "top")
