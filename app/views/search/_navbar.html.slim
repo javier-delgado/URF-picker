@@ -1,7 +1,8 @@
 nav.navbar.navbar-default.navbar-results role="navigation"
   .container-fluid
     .navbar-header
-      = image_tag asset_path('logo.png'), class: 'navbar-logo'
+      = link_to root_path do
+        = image_tag asset_path('logo.png'), class: 'navbar-logo'
 
     .collapse.navbar-collapse
       .col-sm-5.col-md-5
