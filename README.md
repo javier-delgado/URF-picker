@@ -67,7 +67,8 @@ This is a list of the most important Gems (libraries) used in this project:
 - [whenever](https://github.com/javan/whenever)
 - [select2-rails](https://github.com/argerim/select2-rails)
 - [capistrano](https://github.com/capistrano/capistrano)
-
+##Tests
+This project doesn't have automated tests in part because of the simplicity of the project but also to accelerate the development process. 
 ##License 
 URF champion picker isn’t endorsed by Riot Games and doesn’t reflect the views or opinions of Riot Games or anyone officially involved in producing or managing League of Legends. League of Legends and Riot Games are trademarks or registered trademarks of Riot Games, Inc. League of Legends © Riot Games, Inc.
 ####The MIT License (MIT)
