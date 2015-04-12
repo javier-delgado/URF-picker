@@ -109,15 +109,78 @@ SearchOption.create(name: 'Be a damage monster!',
   ordering: 'DESC',
   explanation: '{champ_name}, the perfect attack champion. Pick him and cause tons of physical and magical damage to your enemies!'
 
-#  total_damage_taken                 :integer
-#  total_heal                         :integer
-#  total_time_crowd_control_dealt     :integer
-#  tower_kills                        :float
-#  triple_kills                       :float
-#  true_damage_dealt_to_champions     :integer
-#  unreal_kills                       :float
-#  wards_placed                       :float
-#  wins                               :float
-#  loses                              :float
-#  region_id                          :integer
-#  count                              :integer
+SearchOption.create(name: 'Be the perfect tank!', 
+  associated_stat: 'total_damage_taken', 
+  ordering: 'DESC',
+  explanation: "Use {champ_name} and you'll absorb plenty of damage from all the sources!"
+
+SearchOption.create(name: 'Get as little damage as possible!', 
+  associated_stat: 'total_damage_taken', 
+  ordering: 'ASC',
+  explanation: "So you want to play your game without receiving any damage? Pick {champ_name} and let the Tanks do their job!"
+
+SearchOption.create(name: 'Be a healing machine!', 
+  associated_stat: 'total_heal', 
+  ordering: 'DESC',
+  explanation: "Pick {champ_name} and become an ambulance in the game"
+
+SearchOption.create(name: 'Be a crowd control beast!', 
+  associated_stat: 'total_time_crowd_control_dealt', 
+  ordering: 'DESC',
+  explanation: "So you love when your enemies are stunned, rooted, snared, feared, slowed, airborned, ... (and every single form of crowd control)? Pick {champ_name} and your opponents will remain still the entire game!"
+
+SearchOption.create(name: 'Destroy every single tower!', 
+  associated_stat: 'tower_kills', 
+  ordering: 'DESC',
+  explanation: "If you want to destroy one tower after another, pick {champ_name} and make the towers wish they could run away!"
+
+SearchOption.create(name: 'Get many triple kills!', 
+  associated_stat: 'triple_kills', 
+  ordering: 'DESC',
+  explanation: "If you want to get lots of triple kills (not quadras or pentas), pick {champ_name}! (You should consider playing in twisted treeline though)"
+
+SearchOption.create(name: 'Be the true danage king!', 
+  associated_stat: 'true_damage_dealt_to_champions', 
+  ordering: 'DESC',
+  explanation: "Can your fell it? That's the fear of your enemies, because they now there is no defense to prevent you from destroying them. Pick {champ_name} and devour your opponents! (nom nom nom)"
+
+SearchOption.create(name: 'Be an unreal player!', 
+  associated_stat: 'unreal_kills', 
+  ordering: 'DESC',
+  explanation: "So penta kills are not enough for you? You like to kill all your opponents and kill them again as soon as they revive? Pick {champ_name} and keep the hexakill spirit alive!"
+
+SearchOption.create(name: 'Have sight of the entire map!', 
+  associated_stat: 'wards_placed', 
+  ordering: 'DESC',
+  explanation: "Pick {champ_name} name and start placing wards all over the place! (Even though you could the the same with any champion in the game)"
+
+SearchOption.create(name: 'Be popular!', 
+  associated_stat: 'count', 
+  ordering: 'DESC',
+  explanation: "{champ_name} is the most played champion, pick him and follow the trend!"
+
+#Special cases
+SearchOption.create(name: 'Draaaaven!', 
+  associated_stat: 'Draven', 
+  ordering: 'champion',
+  explanation: "If you want to draven more you should pick Draven and show your enemies what League of Draven is about"
+
+SearchOption.create(name: 'Nom nom nom!', 
+  associated_stat: "Cho'Gath", 
+  ordering: 'champion',
+  explanation: "Eat your enemies -> Become bigger -> Win the game. With Cho'Gath is as simple as that"
+
+SearchOption.create(name: 'Go where I please!', 
+  associated_stat: 'Dr. Mundo', 
+  ordering: 'champion',
+  explanation: "Pick Dr. Mundo and he'll take you wherever he pleases!"
+
+SearchOption.create(name: 'Be a captain on duty!', 
+  associated_stat: 'Teemo', 
+  ordering: 'champion',
+  explanation: 'Pick Teemo and your enemies and teammates will recognize you as the most annoyin... I mean best player of all times!'
+
+SearchOption.create(name: 'Ok', 
+  associated_stat: 'Rammus', 
+  ordering: 'champion',
+  explanation: "If you want to be Ok pick Rammus and you'll be Ok"

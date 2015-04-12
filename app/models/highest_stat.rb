@@ -37,7 +37,8 @@ class HighestStat < ActiveRecord::Base
   belongs_to :champion
   belongs_to :region
 
-  scope :by_region, ->(region) { where(region: region)}
+  scope :by_region,     ->(region) { where(region: region)}
+  scope :by_champ_name, ->(name)   { where("champion.name = ?", name)}
 
   def stats_names
     names = attribute_names - ['id', 'champion_id', 'region_id', 'count']

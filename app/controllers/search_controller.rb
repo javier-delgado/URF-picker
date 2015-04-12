@@ -5,8 +5,13 @@ class SearchController < ApplicationController
 
     @region = Region.find_by(key: params[:region])
 
-    @result = HighestStat.by_region(@region)
-      .order(@option.order_query).first
+    if @option.ordering == 'champion'
+      @result = HighestStat.by_region(@region)
+        .by_champ_name(@option.associated_stat).first
+    else
+      @result = HighestStat.by_region(@region)
+        .order(@option.order_query).first
+    end
 
     render :results
   end
