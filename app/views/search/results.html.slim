@@ -27,6 +27,7 @@
             - if(stat_name == "wins" or stat_name == "loses")
               td = number_to_percentage("%.1f" % (@result[stat_name] * 100), precision: 0)
             - else
-              td = "%.10g" % ("%.1f" % @result[stat_name])
+              td = to_decimal_non_zero_value(@result[stat_name])
+              /td = "%.10g" % ("%.2f" % @result[stat_name])
 
 = put_background_image(@result.champion.image, "top")
