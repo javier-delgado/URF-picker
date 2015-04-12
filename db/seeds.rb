@@ -184,3 +184,8 @@ SearchOption.create(name: 'Ok',
   associated_stat: 'Rammus', 
   ordering: 'champion',
   explanation: "If you want to be Ok pick Rammus and you'll be Ok")
+
+SearchOption.create(name: 'Be a DunkMaster!', 
+  associated_stat: 'Darius', 
+  ordering: 'champion',
+  explanation: "Pick Darius and dunk everyone, everywhere, everytime! Unless ultimate is on cooldown... If that's the case just walk away.")

@@ -23,6 +23,6 @@ class SearchOption < ActiveRecord::Base
   end
 
   def self.for_select
-    all.map { |x| x.name }
+    all.shuffle.map { |x| x.name }
   end
 end

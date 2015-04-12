@@ -1,7 +1,7 @@
 module SearchHelper
-  def search_options
-    options = SearchOption.all
-  end
+  #def search_options
+    #options = SearchOption.all.shuffle
+  #end
 
   def to_decimal_non_zero_value(number, decimals = 1)
     result = "%.10g" % ("%.#{decimals}f" % number)
