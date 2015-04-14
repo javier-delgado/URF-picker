@@ -6,7 +6,7 @@
     .desc-main
       = image_tag asset_path('logo.png'), class: 'main-title'
 
-      p.search-explain Whether you'd like to win every game, get lots of kills or just gave fun, we'll pick the perfect champion for you!
+      p.search-explain Whether you'd like to win every game, get lots of kills or just have fun, we'll pick the perfect champion for you!
 
     = form_tag search_champion_path, id: 'search-form', class: 'form-inline search-form', onkeypress: 'return event.keyCode != 13;'
       = render 'partial/search_bar'
