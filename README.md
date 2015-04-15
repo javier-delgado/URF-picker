@@ -52,10 +52,11 @@ This will create the database with some data (Champions and some other)
 ####Getting URF matches data
 The application has an automated task to fetch URF matches data periodically, BUT this won't work after April 17th, 2015 because the endpoint for URF matches in the Riot Games API will be closed.
 
-Instead you can download a pre-populated database from [here]() and then import it with the following command:
+Instead you can download a pre-populated database from [here](https://mega.co.nz/#!EhVT2aJB!kusxDpVefO9oJFJ1yDFBhULr0dI349v49L2LgsNTAu4) and then import it with the following command:
 ```sh
 $ psql -U [dbuser] -d db_urfpicker -f [the_file_you_downloaded]
 ```
+Keep in mind this database contains over 100k random URF matches data, so it is quite heavy.
 ####Finish
 That should be it, run "rails server" to get the app running, and try it in your browser http://localhost:3000
 
