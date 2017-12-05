@@ -11,7 +11,7 @@ require 'capistrano/rails'
 require 'capistrano/rvm'
 set :rvm_type, :user
 set :rvm_ruby_version, '2.1.5@urfpicker'
-
+  
 # Includes tasks from other gems included in your Gemfile
 #
 # For documentation on these, see for example:
